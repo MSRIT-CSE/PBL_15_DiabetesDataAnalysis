@@ -1,0 +1,1 @@
+plot(diabetes4$diag_1 , jitter(diabetes4$gender, 0.15),pch=19,xlab="Primary Diagnosis", ylab="Sex(1-Female, 2-Male)")

@@ -1,0 +1,6 @@
+plot(diabetes4$A1Cresult, jitter(diabetes4$gender, 0.15),pch=19,xlab="Primary Diagnosis", ylab="Sex(1-Female, 2-Male)")
+diabetes5$A1Cresult<- as.numeric(diabetes5$A1Cresult)
+xv<- seq(min(diabetes5$A1Cresult),max(diabetes5$A1Cresult),0.01)
+model<- glm(diabetes5$gender~diabetes5$A1Cresult,binomial)
+yv<-predict(model,list(xv),type="response")
+lines(xv,yv,col="red")
